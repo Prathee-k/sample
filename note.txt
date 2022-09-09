@@ -1,0 +1,104 @@
+RULE: custom hook
+
+Displaying multiple data: In react whenever we want to display multiple data out of an array instead of writing
+multiple divs, we return multiple divs by the help of array inbuilt method "map"
+SYntax : array.map((val)=>{return
+(
+    <div>
+
+</div>)
+})
+
+Fetch : In react to Fetch the data from json docs we can use fetch method
+SYntax: fetch(resource, obj)
+create: fetch( resource to fetch an array, {method:"POST",
+          headers:{content-type:"application/json},
+          body:JSON.stringify(new obj)})
+
+Read: fetch( resource to fetch an array)
+      .then((response)=>{return response.json()})
+      .then((data)=>{setVal(data)})
+
+      fetch( response to fetch an object)
+      .then((response)=>{return response.json()})
+      .then((data)=>{setVal(data)})
+
+Update: fetch (resource to fetch an object, {method:"PUT",
+                                             headers:{Accept-Type :"application/json,
+                                             content-Type: "application/json}
+                                             body:JSON.stringify(replacing obj)})
+
+Delete: fetch (resource to fetch the object,{method:"DELETE"})
+
+Handling errors in react related to data:
+
+1) issue with network: when this issue is arised our fetch promise will be rejected and that reject method
+will send  error object.
+
+fetch( resource to fetch an array)
+      .then((response)=>{return response.json()})
+      .then((data)=>{setVal(data)})
+      .catch((error)=>{use error.message})
+
+
+
+2) issue with resource:  when this issue is arised our fetch promise will be resolved but the data will be empty
+
+        fetch( resource to fetch an array)
+        .then((response)=>{ if (response.ok===false)
+        {
+            throw error("data not found)
+        }
+        return response,json()})
+        .catch((error)=>{ use error.message})
+
+ React routing: non-react apps will follow conventional routing, means we get a different html page from app
+         server for every request of the browser.
+         example: netbanking apps
+
+       React app will follow react routing, where we change only the content inside the same HTML page which is sent 
+       initially ( index.html ).
+
+        import{ BrowserRouter as Router, Route, Switch} from 'react router dom'
+<Router>
+    <common component>
+    <Switch>
+             <Route exact path="/">
+               <initial component>
+             </Route>
+
+             <Route exact path="/another path">
+               <component 2>
+             </Route>
+
+              <Route exact path="/another path">
+               <component 3>
+               </Route>
+   </Switch>
+   </Router>
+   Rule: insted of <a> tag we use <Link to="another path"> </Link>
+
+
+React Route parameter: Route parameter is named url segment which is used to save the values specifed at their
+ url position.
+
+        through <Link to="/moviedetail${id}">   we paste to url --> /moviedetail3
+         In <Route path> we save it as parameter --> /moviedetail:id
+        in renders component --> to use a value we can call useParams hook
+        example: let {id}=useParams();
+
+      programming Redirect : In react apps once any of the specified behaviour is completed there is a requirement
+      of redirecting page to another so we can achieve this through useHistory hook.
+
+     import ( useHistory ) from react-router-dom
+
+    in react apps we need to render not found pages if user is trying to call a different path we can use 
+    "*" as path. 
+     example: <Route path="*">
+                 <not found page>
+              </Route>      
+
+
+
+
+

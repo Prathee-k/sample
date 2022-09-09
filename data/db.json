@@ -1,0 +1,53 @@
+{
+  "moviesList": [
+    {
+      "movieName": "Salagaaaaa",
+      "hero": "Duniya Vijayy",
+      "heroine": "sanjana",
+      "genere": "Action",
+      "id": 17
+    },
+    {
+      "movieName": "Vedhalam",
+      "hero": "Ajith kumar",
+      "heroine": "Shruthi hassan",
+      "genere": "Action",
+      "id": 20
+    },
+    {
+      "movieName": "Master",
+      "hero": "Vijay",
+      "heroine": "Andrea",
+      "genere": "action",
+      "id": 21
+    },
+    {
+      "movieName": "Wild dog",
+      "hero": "Nagarjuna",
+      "heroine": "Dia Mirza",
+      "genere": "Action Thriller",
+      "id": 23
+    },
+    {
+      "movieName": "Petta",
+      "hero": "Rajanikanth",
+      "heroine": "Simran",
+      "genere": "Action",
+      "id": 24
+    },
+    {
+      "movieName": "Charlie777",
+      "hero": "Rakshith shetty",
+      "heroine": "Sangeeta",
+      "genere": "Drama",
+      "id": 25
+    },
+    {
+      "movieName": "Ugramm",
+      "hero": "Srimurali",
+      "heroine": "Haripriya",
+      "genere": "Action",
+      "id": 26
+    }
+  ]
+}
